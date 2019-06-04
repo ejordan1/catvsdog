@@ -19,20 +19,26 @@ $(document).ready(function() {
 
     $("#dog").click(function(){
       $("ul.masterdog").append("<li>Bow Bow ...</li>");
+      $("ul.masterdog").prepend('<img src="./img/dog.jpeg">');
       $("ul.masterdog").children("li").first().css("background-color","lightblue");
       $("ul.masterdog").children("li").first().click(function() {
     $(this).remove();
         });
+        $("ul.masterdog").children("img").first().click(function() {
+      $(this).remove();
+          });
     });
 
     $("#cat").click(function(){
-
-      $("ul.mastercat").after("<img src="../img/cat.jpeg">");
-      // $("ul.mastercat").after(document.getElementById("img"));
+      $("ul.mastercat").prepend('<img src="./img/cat.jpeg">');
+      $("ul.mastercat").prepend("<li>meow meow meow ...</li>");
       $("ul.mastercat").children("li").first().css("background-color","red");
       $("ul.mastercat").children("li").first().click(function() {
     $(this).remove();
         });
+        $("ul.mastercat").children("img").first().click(function() {
+      $(this).remove();
+          });
       });
 
 
